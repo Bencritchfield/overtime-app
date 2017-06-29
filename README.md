@@ -3,9 +3,9 @@
 ##Key requirement: company needs documentation that salaried employees did or did not get overtime each week
 
 ## Models
--xPost -> date:date rationale:text
--x User -> Devise
--x AdminUser -> STI
+- x Post -> date:date rationale:text
+- x User -> Devise
+- x AdminUser -> STI
 
 
 ## Features:
@@ -17,8 +17,7 @@
 
 
 ## UI:
--Bootstrap -> formatting
+- x Bootstrap -> formatting
 
 ## refactor ToDos
 - refactor user association integration test in post_spec
-- Add full name for users
