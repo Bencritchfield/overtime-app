@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :edit, :update]
+	before_action :set_post, only: [:show, :edit, :update, :destroy]
 	def index
 		@posts = Post.all
 	end
@@ -27,17 +27,22 @@ class PostsController < ApplicationController
 	def update
 		@post.update(post_params)
 		if 'has link from home page'
-			redirect_to @post, notice: 'Your post was created successfully'
+			redirect_to @post, notice: 'Your post was edited successfully'
 		else
 			render :edit
 		end
 	end
 
-	def show 
-		
+	def show	
+	end
+
+	def destroy
+		@post.delete
+		redirect_to posts_path, notice: 'Your post was deleted successfully'
 	end
 
 	private
+
 		def post_params
 			params.require(:post).permit(:date, :rationale)
 		end
