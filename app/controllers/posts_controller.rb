@@ -21,13 +21,14 @@ class PostsController < ApplicationController
 	end
 
 	def edit
-
+		authorize @post
 	end
 
 	def update
-		@post.update(post_params)
-		if 'has link from home page'
-			redirect_to @post, notice: 'Your post was edited successfully'
+		authorize @post
+
+		if @post.update(post_params)
+	  redirect_to @post, notice: 'Your post was edited successfully'
 		else
 			render :edit
 		end
