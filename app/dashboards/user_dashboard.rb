@@ -1,4 +1,3 @@
-
 require "administrate/base_dashboard"
 
 class UserDashboard < Administrate::BaseDashboard
@@ -18,7 +17,6 @@ class UserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     phone: Field::String.with_options(searchable: false),
-
   }.freeze
 
   COLLECTION_ATTRIBUTES = [

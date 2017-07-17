@@ -6,6 +6,7 @@
 - x Post -> date:date rationale:text
 - x User -> Devise
 - x AdminUser -> STI
+- AuditLog
 
 
 ## Features:
@@ -19,8 +20,8 @@
 
 ## UI:
 - x Bootstrap -> formatting
-- Icons from font awesome
+- x Icons from font awesome
 - x Update the styles for forms
 
-## refactor ToDos
-- Refactor posts/_form for admin user with status
+## ToDos
+- Integrate validation for phone addr in User:
