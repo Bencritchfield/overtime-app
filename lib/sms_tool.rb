@@ -13,4 +13,3 @@ module SmsTool
 	end
 end
 
-SmsTool.send_sms(number: '8017352102', message: "Im in a text")
